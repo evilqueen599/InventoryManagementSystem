@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.addProductController">
+   <children>
+      <TableView fx:id="partTable" layoutX="480.0" layoutY="50.0" prefHeight="200.0" prefWidth="409.0">
+        <columns>
+          <TableColumn fx:id="partId" prefWidth="75.0" text="Part ID" />
+          <TableColumn fx:id="partName" prefWidth="75.0" text="Part Name" />
+            <TableColumn fx:id="partInvLevel" prefWidth="100.0" text="Inventory Level" />
+            <TableColumn fx:id="costPerUnit" prefWidth="160.0" text="Price/Cost per Unit" />
+        </columns>
+      </TableView>
+      <Label layoutX="67.0" layoutY="46.0" text="Add Product">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="102.0" text="ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="150.0" text="Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="204.0" text="Inv">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="258.0" text="Price">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="314.0" text="Max">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="314.0" text="Min">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prodIdTxt" editable="false" layoutX="150.0" layoutY="99.0" promptText="Auto Gen- Disabled" />
+      <TextField fx:id="prodNameTxt" layoutX="150.0" layoutY="147.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="prodInvTxt" layoutX="150.0" layoutY="201.0" prefHeight="26.0" prefWidth="83.0" />
+      <TextField fx:id="prodCostTxt" layoutX="150.0" layoutY="255.0" prefHeight="26.0" prefWidth="83.0" />
+      <TextField fx:id="prodMaxTxt" layoutX="150.0" layoutY="311.0" prefHeight="26.0" prefWidth="83.0" />
+      <TextField fx:id="prodMinTxt" layoutX="300.0" layoutY="311.0" prefHeight="26.0" prefWidth="83.0" />
+      <TextField fx:id="prodSearchTxt" layoutX="723.0" layoutY="14.0" onAction="#handleProdSearch" onKeyPressed="#prodSearch" prefHeight="26.0" prefWidth="167.0" promptText="Search by Part ID or Name" />
+      <TableView fx:id="asscPartTable" layoutX="480.0" layoutY="300.0" prefHeight="200.0" prefWidth="409.0">
+         <columns>
+            <TableColumn fx:id="asscPartId" prefWidth="75.0" text="Part ID" />
+            <TableColumn fx:id="asscPartName" prefWidth="75.0" text="Part Name" />
+            <TableColumn fx:id="asscPartInvLevel" prefWidth="100.0" text="Inventory Level" />
+            <TableColumn fx:id="asscCostPerUnit" prefWidth="160.0" text="Price/Cost per Unit" />
+         </columns>
+      </TableView>
+      <Button fx:id="addProductBtn" layoutX="845.0" layoutY="253.0" mnemonicParsing="false" onAction="#handleAddProduct" text="Add">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteProdBtn" layoutX="723.0" layoutY="508.0" mnemonicParsing="false" onAction="#handleProdDelete" text="Remove Associated Part">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveProdBtn" layoutX="759.0" layoutY="556.0" mnemonicParsing="false" onAction="#handleSave" text="Save">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelBtn" layoutX="829.0" layoutY="556.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
